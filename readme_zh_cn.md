@@ -1,6 +1,6 @@
 ## Shadowsocks/r web manager
 
-[English](https://github.com/131mm/ssweb-web.py/blob/master/readme.md)|中文
+[English](https://github.com/moeik/ssr-web/blob/master/readme.md)|中文
 
 #### 简介
 
@@ -34,7 +34,7 @@ Python3.6，Python3应该都可以
 
 web.py==0.40.dev1
 
-django 版本 [here](https://github.com/131mm/shadowsocks-monitor)
+django 版本 [here](https://github.com/moeik/shadowsocks-monitor)
 
 #### 声明：
 
@@ -43,7 +43,11 @@ django 版本 [here](https://github.com/131mm/shadowsocks-monitor)
 #### 使用
 
 本项目与doubi写的ssr多用户一键脚本配合使用，请先安装该脚本
-click [here](https://github.com/ToyoDAdoubi/doubi#ssrmush) to install it.
+···
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh
+chmod +x ssrmu.sh
+bash ssrmu.sh
+···
 
 切换到root用户  `sudo su`
 
@@ -51,7 +55,7 @@ click [here](https://github.com/ToyoDAdoubi/doubi#ssrmush) to install it.
 
 安装Git  `apt install git`
 
-拉取本项目到 ’/usr/local‘ 目录 `git clone https://github.com/131mm/ssweb-web.py.git /usr/local/ssweb-web.py && cd /usr/local/ssweb-web.py`
+拉取本项目到 ’/usr/local‘ 目录 `git clone https://github.com/moeik/ssr-web.git /usr/local/ssr-web && cd /usr/local/ssr-web`
 
 网站部署：
 
@@ -72,7 +76,7 @@ click [here](https://github.com/ToyoDAdoubi/doubi#ssrmush) to install it.
 1. 
 ```
 apt install python3 python3-pip python3-venv git nginx apache2-utils -y;
-git clone https://github.com/131mm/ssweb-web.py.git /usr/local/ssweb-web.py &&cd /usr/local/ssweb-web.py;
+git clone https://github.com/moeik/ssr-web.git /usr/local/ssr-web &&cd /usr/local/ssr-web;
 ```
 2. 修改nginx配置文件‘nginx’中的 server_name 为你的域名 
 3. 修改 'ssr.py' 文件第三行的域名为你的域名        
@@ -82,21 +86,8 @@ cp nginx /etc/nginx/sites-enabled/;
 htpasswd -c /etc/nginx/passwd.db username;
 nginx -s reload;
 python3 -m venv venv;
-bash run.sh;
+bash start.sh;
 
 ```
 
-#### 网站截图
-
-主页: 显示用户信息
-
-![深度截图_选择区域_20190214165157.png](https://i.loli.net/2019/02/14/5c652c78795e0.png)
-
-点击用户可查看详细配置:
-
-![深度截图_选择区域_20190214165217.png](https://i.loli.net/2019/02/14/5c652c7860e24.png)
-
-修改用户配置:
-
-![深度截图_选择区域_20190214165243.png](https://i.loli.net/2019/02/14/5c652c784084c.png)
 
