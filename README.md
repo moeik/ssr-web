@@ -88,16 +88,4 @@ python3 -m venv venv;
 bash start.sh;
 
 ```
-#### Previews
 
-homepage: user_infos
-
-![](https://i.loli.net/2019/02/14/5c652c78795e0.png)
-
-user_configs:
-
-![](https://i.loli.net/2019/02/14/5c652c7860e24.png)
-
-edit user_config:
-
-![](https://i.loli.net/2019/02/14/5c652c784084c.png)
