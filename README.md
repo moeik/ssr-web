@@ -17,7 +17,7 @@ Please be aware that there was no security tests on this project
 
 - [x] 3、change settings
 
-##### Visitor: (with a suffix)(/visitor)
+##### Visitor: (with a suffix)(/user)
 
 - [x] see infos
 
