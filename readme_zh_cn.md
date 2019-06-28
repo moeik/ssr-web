@@ -43,11 +43,12 @@ django 版本 [here](https://github.com/moeik/shadowsocks-monitor)
 #### 使用
 
 本项目与doubi写的ssr多用户一键脚本配合使用，请先安装该脚本
-···
+
+```
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh
 chmod +x ssrmu.sh
 bash ssrmu.sh
-···
+```
 
 切换到root用户  `sudo su`
 
