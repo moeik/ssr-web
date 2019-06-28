@@ -85,7 +85,7 @@ cd /usr/local/ssr-web;
 ```
 nginx -s reload;
 python3 -m venv venv;
-bash run.sh;
+bash start.sh;
 
 ```
 #### Previews
