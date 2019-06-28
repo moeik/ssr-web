@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>ss / ssr web of moeik</title>
+	<link rel="icon" type="image/x-icon" href="https://ws3.sinaimg.cn/large/005LHbWaly1g0jwi7vcyij30u00u04qp.jpg">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" >
+	<style type="text/css">
+		body {font-size: 35px;  background: #ebebeb url('');padding-bottom: 30px;}
+		.navbar { min-height: 50px;background: black; color: #fff; padding: 20px; font-size: 45px; }
+        .content {padding:20px;}
+        .ss {font-size: 20px;}
+        .short {background: black; font-size:40px;padding: 1px; }
+        .table-head {font-size: 50px;}
+        .btn-primary {background: black;padding: 20px 30px;border: 1px solid transparent;border-radius:10px; }
+        .delete {background: red; margin-left: 300px;   }
+        input { border: -2px; margin: -1px;padding: 12px;}
+        label {margin: 0;padding: 12px;}
+        .form-horizontal {padding-top: 15px;}
+        .info {margin: 10px;padding: 5px;}
+        select {border: 2px; margin: 1px 1px;padding: 12px 15px; border-color: #fff;}
+		a{color: black;}
+		a:hover{color: black;}
+		.foot{float: left;margin-left: 20px;margin-top: 40px;}
+		.top{font-size: 40px;margin-left: 20px;}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<a href="/visitor" style="color: #fff">ss / ssr web of moeik</a>
+	</div>
+	<div>
+		<span class="top">公告：晚上为网络高峰期，可能有所影响速度。</span>
+	</div>
+	<div class="tconten">
+		<div class="table-head" >
+			<span class="col-xs-3" >用户</span>
+			<span class="col-xs-3">&nbsp;&nbsp;端口</span>
+			<span class="col-xs-3">流量已用</span>
+			<span class="col-xs-3">总流量</span>
+		</div>
+		{% for user in users%}
+		<div class="col-xs-12 info">
+			<div class="short">
+				<span class="col-xs-3">{{user.user}}</span>
+				<span class="col-xs-3">&nbsp;&nbsp;{{user.port}}</span>
+				<span class="col-xs-3">{{user.used}}</span>
+				<span class="col-xs-3">{{user.traffic}}</span>
+			</div>
+		</div>
+        {% endfor%}
+
+
+	</div>
+<div class="foot">
+	<b>软件下载：</b><br>
+	<a href="https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk">ssr 安卓版</a><br>
+	<a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.2/ShadowsocksR-win-4.9.2.zip">ssr Windows版</a><br>
+	<a href="https://github.com/shadowsocksr-backup/ShadowsocksX-NG/releases/download/1.4.2-R8-subscribe-alpha-3/ShadowsocksX-NG-R8.dmg">ssr Mac版</a>
+</div>
+</body>
+</html>
+
+
