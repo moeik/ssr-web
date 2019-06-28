@@ -1,6 +1,6 @@
 ## Shadowsocks/r web manager
 
-[English](https://github.com/moeik/ssr-web/README.md)|中文
+[English](https://github.com/moeik/ssr-web)|中文
 
 #### 简介
 
