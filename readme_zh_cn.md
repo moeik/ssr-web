@@ -62,6 +62,19 @@ bash ssrmu.sh
 
 1. 安装nginx  `apt install nginx` 
 2. 修改nginx配置文件‘nginx’中的 server_name 为你的域名 
+```
+server {
+	listen 80;
+	server_name yourdomain.com;
+	location / {
+		include uwsgi_params;
+		uwsgi_pass 127.0.0.1:8008;
+		uwsgi_read_timeout 5;
+		auth_basic "server";
+		auth_basic_user_file /etc/nginx/passwd.db; 
+	}
+}
+```
 3. 安装apache2-utils来生成网站密码 `apt install apache2-utils`
 4. 生成密码 `htpasswd -c /etc/nginx/passwd.db username`
 5. 修改 'ssr.py' 文件第三行的域名为你的域名        
