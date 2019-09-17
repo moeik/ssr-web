@@ -68,9 +68,13 @@ server {
 		uwsgi_pass 127.0.0.1:8008;
 		uwsgi_read_timeout 5;
 		auth_basic "server";
-		auth_basic_user_file /etc/nginx/passwd.db; 
+		auth_basic_user_file /etc/nginx/passwd.db;
 	}
-}
+
+	location /user {
+	include uwsgi_params;
+	uwsgi_pass localhost:8008;
+	}}
 ```
 3. install apache2-utils using `apt install apache2-utils`
 4. generate password using `htpasswd -c /etc/nginx/passwd.db username`
