@@ -69,7 +69,7 @@ bash ssrmu.sh
 7. 重启nginx  `nginx -s reload`                    
 8. 安装python3 venv pip `apt install python3 python3-venv python3-pip`
 9. 创建虚拟环境 `python3 -m venv venv`          
-10. 启动 `bash run.sh` 
+10. 启动 `bash start.sh` 
 
 ##### Or Method 2
 如果想简单点，可以用下面的命令，和method1是一样的
