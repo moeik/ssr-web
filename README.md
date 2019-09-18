@@ -74,7 +74,8 @@ server {
 	location /user {
 	include uwsgi_params;
 	uwsgi_pass localhost:8008;
-	}}
+	}
+}
 ```
 3. install apache2-utils using `apt install apache2-utils`
 4. generate password using `htpasswd -c /etc/nginx/passwd.db username`
