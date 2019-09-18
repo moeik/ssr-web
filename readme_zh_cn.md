@@ -77,7 +77,8 @@ server {
 	location /user {
 	include uwsgi_params;
 	uwsgi_pass localhost:8008;
-	}}
+	}
+}
 ```
 3. 安装apache2-utils来生成网站密码 `apt install apache2-utils`
 4. 生成密码 `htpasswd -c /etc/nginx/passwd.db username`
