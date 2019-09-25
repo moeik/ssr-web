@@ -1,3 +1,3 @@
-source venv/bin/activate && pip install -r requirements.txt &&(uwsgi -s 127.0.0.1:8008 -w ssweb &)
 chmod 755 ssrweb.sh
-cp ssrweb.sh /root/
+mv ssrweb.sh /root/
+source venv/bin/activate && pip install -r requirements.txt &&(uwsgi -s 127.0.0.1:8008 -w ssweb &)
