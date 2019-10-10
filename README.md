@@ -1,6 +1,6 @@
 ## Shadowsocks/r web manager
 
-English |[中文](https://github.com/moeik/ssr-web/blob/master/readme_zh_cn.md)
+English | [中文](https://github.com/moeik/ssr-web/blob/master/readme_zh_cn.md)
 
 #### Description
 
@@ -17,7 +17,7 @@ Please be aware that there was no security tests on this project
 
 - [x] 3、change settings
 
-##### Visitor: (with a suffix)(/visitor)
+##### Visitor: (with a suffix)(/user)
 
 - [x] see infos
 
@@ -59,6 +59,24 @@ Then
 
 1. install nginx using `apt install nginx` 
 2. change the server_name in file 'nginx' to your domain 
+```
+server {
+	listen 80;
+	server_name yourdomain.com;
+	location / {
+		include uwsgi_params;
+		uwsgi_pass 127.0.0.1:8008;
+		uwsgi_read_timeout 5;
+		auth_basic "server";
+		auth_basic_user_file /etc/nginx/passwd.db;
+	}
+
+	location /user {
+	include uwsgi_params;
+	uwsgi_pass localhost:8008;
+	}
+}
+```
 3. install apache2-utils using `apt install apache2-utils`
 4. generate password using `htpasswd -c /etc/nginx/passwd.db username`
 5. change the website in line 3 of file 'ssr.py' to your domain        
@@ -66,7 +84,7 @@ Then
 7. restart nginx with `nginx -s reload`                    
 8. install venv and pip using `apt install python3-venv python3-pip`   
 9. create virtual-env for web.py using `python3 -m venv venv`          
-10.start it `bash run.sh` 
+10.start it `bash start.sh` 
 
 ##### Or Method 2
 
@@ -88,16 +106,4 @@ python3 -m venv venv;
 bash start.sh;
 
 ```
-#### Previews
 
-homepage: user_infos
-
-![](https://i.loli.net/2019/02/14/5c652c78795e0.png)
-
-user_configs:
-
-![](https://i.loli.net/2019/02/14/5c652c7860e24.png)
-
-edit user_config:
-
-![](https://i.loli.net/2019/02/14/5c652c784084c.png)
