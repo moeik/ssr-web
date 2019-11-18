@@ -58,7 +58,7 @@ and `cd` into it `cd /usr/local/ssr-web`
 Then
 
 1. install nginx using `apt install nginx` 
-2. change the server_name in file 'nginx' to your domain 
+2. change the server_name in file `nginx` to your domain 
 ```
 server {
 	listen 80;
@@ -94,8 +94,8 @@ apt install python3 python3-pip python3-venv git nginx apache2-utils -y;
 git clone https://github.com/moeik/ssr-web.git /usr/local/ssr-web;
 cd /usr/local/ssr-web;
 ```
-2. change the server_name in line 3 of file 'nginx' to your domain
-3. change the website in line 3 of file 'ssr.py' to your domain
+2. change the server_name in line 3 of file `nginx` to your domain
+3. change the website in line 3 of file `ssr.py` to your domain
 4. `cp nginx /etc/nginx/sites-enabled/;`
 5. change the username to anything you like and generate your password `htpasswd -c /etc/nginx/passwd.db username`
 6.
