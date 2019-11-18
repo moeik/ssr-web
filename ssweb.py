@@ -5,11 +5,11 @@ import json
 
 ## 路由
 urls=(
-    '/adm', 'home',
+    '/', 'home',
     '/add', 'add',
     '/delete', 'delete',
     '/edit','edit',
-    '/','visitor'
+    '/user','visitor'
 )
 
 app=web.application(urls,globals())
