@@ -97,16 +97,17 @@ server {
 apt install python3 python3-pip python3-venv git nginx apache2-utils -y;
 git clone https://github.com/moeik/ssr-web.git /usr/local/ssr-web &&cd /usr/local/ssr-web;
 ```
-2. 修改nginx配置文件‘nginx’中的 server_name 为你的域名 
+2. 修改nginx配置文件`nginx`中的 server_name 为你的域名 
 3. 修改 'ssr.py' 文件第三行的域名为你的域名        
+4. 复制nginx配置文件 `cp nginx /etc/nginx/sites-enabled/`;
+5. 设置密码`htpasswd -c /etc/nginx/passwd.db username`;
 
 ```
-cp nginx /etc/nginx/sites-enabled/;
-htpasswd -c /etc/nginx/passwd.db username;
 nginx -s reload;
 python3 -m venv venv;
 bash start.sh;
 
 ```
 
-
+管理地址为 http://xxx.com
+用户查询地址为 http://xxx.com/user
